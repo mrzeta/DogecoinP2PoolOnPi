@@ -16,6 +16,7 @@ This is a Raspberry Pi project to run a local Dogecoin P2Pool on a Raspberry Pi.
 ### Donors List
 
 * [pembo210](http://www.reddit.com/user/pembo210)
+* [dethwysh](http://www.reddit.com/user/dethwysh)
 
 Donations in Doge: DFsJtx8YCVd8fuWj5GFijYcg3RfvZnDd7v
 

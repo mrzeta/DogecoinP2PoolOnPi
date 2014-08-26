@@ -1,11 +1,19 @@
 DogecoinP2PoolOnPi
 ==================
 
-This is a work in progress and not to be used in a live environment at all.
+This is a Raspberry Pi project to run a local Dogecoin P2Pool on a Raspberry Pi.
 
-The plan is to create a self contained P2Pool for the Dogecoin network on a Raspberry Pi.
+## To Install
 
-## Donors List
+`./installdogecoinp2poolonpi.sh`
+
+`cp .dogecoin/dogecoin.conf /home/pi/.dogecoin.conf`
+
+## To start
+
+`startdogecoinandpool.sh`
+
+### Donors List
 
 * [pembo210](http://www.reddit.com/user/pembo210)
 

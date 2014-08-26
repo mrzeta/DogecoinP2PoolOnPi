@@ -20,28 +20,9 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-echo "Upgrade system and setup unattended security upgrades"
-echo "This takes about 30 minutes, so go make a brew!"
-apt-get update && apt-get upgrade && apt-get dist-upgrade && rpi-update 
-echo "You need to say ok to the next step."
-apt-get install unattended-upgrades apt-listchanges && dpkg-reconfigure -plow unattended-upgrades
-echo "Installing System Requirements"
-apt-get install build-essential pkg-config
-apt-get install libtool autotools-dev autoconf automake
-apt-get install libssl-dev
-apt-get install libboost-all-dev
-apt-get install libdb5.1-dev
-apt-get install libdb5.1++-dev
-apt-get install git
-echo "Time to pull Dogecoin repo."
-git clone https://github.com/dogecoin/dogecoin.git
-cd dogecoin
-echo "Start buiding Dogecoin. This takes forever"
-./autogen.sh
-./configure
-make
-echo "Now to do P2Pool"
-apt-get install python-zope.interface python-twisted python-twisted-web screen
-git clone --recursive https://github.com/blixnood/p2pool
-cd p2pool/litecoin_scrypt
-python setup.py install
+echo "Copy the init script"
+cp startdogecoinandpool /etc/init.d/startdogecoinandpool
+echo "Make it executable"
+chmod 755 /etc/init.d/startdogecoinandpool
+echo "Make it run on startup"
+update-rc.d startdogecoinandpool defaults

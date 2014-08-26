@@ -11,8 +11,8 @@
 # Description:       dogecoind is the core of dogecoin and manages the blockchain
 ### END INIT INFO
     echo "Starting dogecoind"
-    /home/pi/dogecoin/src/dogecoind
+    /home/dogecoin/src/./dogecoind
     echo "Starting P2Pool"
-    screen -d -m /home/pi/dogecoin/src/dogecoind/p2pool/run_p2pool.py --give-author 0 --net dogecoin dogecoinrpc 4Z3uvSaMgrGqazzixCnz68Ymgiwqyt45W6oyne3ksPrV --fee 1.0 --address DFsJtx8YCVd8fuWj5GFijYcg3RfvZnDd7v
+    /home/dogecoin/src/dogecoind/p2pool/./run_p2pool.py --give-author 0 --net dogecoin dogecoinrpc 4Z3uvSaMgrGqazzixCnz68Ymgiwqyt45W6oyne3ksPrV --fee 1.0 --address DFsJtx8YCVd8fuWj5GFijYcg3RfvZnDd7v
 
 exit 0
